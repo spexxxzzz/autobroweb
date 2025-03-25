@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 8080; // Change this to your desired port
+const PORT = 3000; // Change this to your desired port
 
 const server = http.createServer((req, res) => {
   console.log('Request URL:', req.url); // Log the requested URL for debugging

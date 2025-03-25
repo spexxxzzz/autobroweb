@@ -32,7 +32,7 @@ export default function Home() {
 
         {/* Navigation */}
         <div className="flex justify-center gap-16 mb-96 mt-96">
-          <Link href="#" className="text-white hover:text-gray-300 flex items-center">
+          <Link href="#try-cogni" className="text-white hover:text-gray-300 flex items-center">
             Try Cogni
           </Link>
           <Link href="#" className="text-white hover:text-gray-300">
@@ -108,22 +108,22 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             className="min-h-screen flex flex-col items-center justify-center relative z-10 py-4"
+            id="try-cogni"
           >
-            <div className="flex justify-center items-center mb-16 gap-2">
-              <h2 className="text-4xl font-light tracking-tighter">Try</h2>
-              <div className="relative w-[200px] h-[80px] bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+            <div className="flex justify-center items-center mb-16">
+              <div className="relative w-[280px] h-[100px] flex items-center justify-center overflow-hidden">
                 <Image
-                  src="/images/cogni.jpeg"
+                  src="/images/4.png"
                   alt="Cogni"
-                  width={180}
-                  height={60}
-                  className="object-contain mix-blend-lighten"
+                  width={240}
+                  height={80}
+                  className="object-contain hover:opacity-80 transition-opacity duration-300"
                   priority
                 />
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto px-4">
-              <div className="space-y-6">
+            <div className="max-w-6xl w-full mx-auto px-4">
+              <div className="space-y-6 max-w-xl">
                 <p className="text-lg text-gray-300 leading-relaxed">
                   Experience the future of AI assistance with Cogni. Our advanced AI agent understands context,
                   learns from interactions, and executes tasks with unprecedented precision.
@@ -139,30 +139,6 @@ export default function Home() {
                   >
                     Start Free Trial
                   </Link>
-                </div>
-              </div>
-              <div className="relative bg-gray-900 rounded-lg overflow-hidden shadow-2xl p-6">
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500/20 to-blue-500/20"></div>
-                <div className="relative z-10 space-y-4">
-                  <h3 className="text-2xl font-light tracking-tighter">Key Features</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-center gap-2">
-                      <div className="h-2 w-2 bg-purple-500 rounded-full"></div>
-                      <span>Context-aware task execution</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <div className="h-2 w-2 bg-blue-500 rounded-full"></div>
-                      <span>Advanced natural language processing</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <div className="h-2 w-2 bg-cyan-500 rounded-full"></div>
-                      <span>Seamless integration capabilities</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <div className="h-2 w-2 bg-teal-500 rounded-full"></div>
-                      <span>Real-time learning and adaptation</span>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
