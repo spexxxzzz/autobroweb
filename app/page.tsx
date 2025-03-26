@@ -2,23 +2,45 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Linkedin } from "lucide-react"
+import { Instagram, Linkedin } from "lucide-react"
 import { motion } from "framer-motion"
+import XLogo from "./components/XLogo"
+import { useEffect, useRef } from "react"
 
 export default function Home() {
+  const iframeRef = useRef<HTMLIFrameElement>(null)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (iframeRef.current) {
+        // Keep the iframe working but don't adjust its size
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <div className="bg-black text-white overflow-x-hidden">
       {/* Social Media Icons */}
       <div className="fixed top-6 right-6 flex gap-4 z-20">
         <Link href="#" className="text-white hover:text-gray-300">
-          <Facebook size={20} />
+          <Instagram size={24} />
         </Link>
         <Link href="#" className="text-white hover:text-gray-300">
-          <Twitter size={20} />
+          <XLogo size={24} />
         </Link>
         <Link href="#" className="text-white hover:text-gray-300">
-          <Linkedin size={20} />
+          <Linkedin size={24} />
         </Link>
+      </div>
+
+      {/* Background Text */}
+      <div className="fixed top-[35%] left-1/2 transform -translate-x-1/2 z-0 w-full text-center pointer-events-none">
+        <h2 className="text-[#f5e9d3] text-[15vw] leading-none font-light opacity-30 whitespace-nowrap tracking-tighter">
+          Web of Agents
+        </h2>
       </div>
 
       {/* Main Content */}
@@ -35,22 +57,22 @@ export default function Home() {
 
         {/* Navigation */}
         <div className="flex justify-center gap-16 mb-96 mt-96">
-          <Link href="#try-cogni" className="text-white hover:text-gray-300 flex items-center">
+          <Link href="#try-cogni" className="bg-[#5a5a58] text-white hover:bg-[#6d6d6b] px-6 py-2 rounded-full font-medium transition-colors">
             Try Cogni
           </Link>
-          <Link href="#contact" className="text-white hover:text-gray-300">
+          <Link href="#contact" className="bg-[#5a5a58] text-white hover:bg-[#6d6d6b] px-6 py-2 rounded-full font-medium transition-colors">
             Contact Us
           </Link>
         </div>
 
         {/* Content Sections Container with Dark Overlay */}
-        <div className="relative w-screen bg-black/90 mt-64 left-[50%] right-[50%] mx-[-50vw]">
+        <div className="relative bg-black/90 mt-64 w-full">
           {/* About Section */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 relative z-10 min-h-screen flex items-center container mx-auto px-4">
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 relative z-10 min-h-[70vh] flex items-center container mx-auto px-4">
           <div className="md:col-span-1">
             <h2 className="text-4xl font-light tracking-tighter mb-8">About Us</h2>
           </div>
@@ -79,10 +101,10 @@ export default function Home() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="min-h-screen flex flex-col items-center justify-center relative z-10 py-4">
+          className="min-h-[80vh] flex flex-col items-center justify-center relative z-10 py-4 mt-[-5vh]">
           <h2 className="text-4xl font-light tracking-tighter mb-16 text-center">Introduction Video</h2>
           <p className="text-lg text-gray-300 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
-            This video will give a feel of what Web of Agents will look like
+            This video will give a feel of what a Web of Agents will look like
           </p>
           <div className="w-full max-w-4xl aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-2xl relative group">
             <iframe
@@ -110,7 +132,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="min-h-[70vh] flex flex-col items-center justify-center relative z-10 py-4"
+            className="min-h-[50vh] flex flex-col items-center justify-center relative z-10 py-4"
             id="try-cogni"
           >
             <div className="flex justify-center items-center mb-16">
@@ -128,19 +150,31 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto px-4">
               <div className="space-y-6">
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Ask anything. Formal question, informal question. Ask about people, places, travelling, best movies. Ask your personal queries. Ask about business, about stocks, about science, about budget planning.
+                  Ask anything—formal or informal. Inquire about people, places, travel, top movies, business, stocks, science, or budget planning. Cogni knows everything and learns more about you as you use it. The more you ask, the smarter it gets. Keep exploring—ask anything!
                 </p>
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Cogni knows everything and will know more about you as you use it. So, keep using it. Ask anything!
+                  And don't forget to use the Collaboration feature! Your Cogni can team up with others' Cogni agents to streamline tasks and make work effortless. Work smarter, together!
                 </p>
+
                 <div className="mt-8">
                   <Link
                     href="#"
                     className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-100 transition-colors duration-300"
                   >
-                    Try Now <span className="text-green-500">⟶</span><span className="text-blue-500">⟶</span>
+                    Try Now
                   </Link>
                 </div>
+              </div>
+              
+              {/* Neural Network Animation - Without background */}
+              <div className="w-full h-[495px] rounded-lg overflow-hidden shadow-xl border-none ml-64 -mr-32 -mt-12">
+                <iframe 
+                  ref={iframeRef}
+                  src="/neural-network.html"
+                  className="w-full h-full"
+                  title="Neural Network" 
+                  style={{ backgroundColor: 'transparent' }}
+                />
               </div>
             </div>
           </motion.div>
@@ -150,13 +184,13 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="min-h-[70vh] flex flex-col items-center justify-center relative z-10 py-4"
+            className="min-h-[50vh] flex flex-col items-center justify-center relative z-10 py-4"
             id="contact"
           >
-            <h2 className="text-4xl font-light tracking-tighter mb-16 text-center">Contact Us</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-24 max-w-6xl mx-auto">
-              {/* Names */}
-              <div className="space-y-6 pl-0 md:pl-0 ml-[-2rem] md:ml-8">
+            <h2 className="text-4xl font-light tracking-tighter mb-8 text-center">Contact Us</h2>
+            <div className="flex flex-col items-center max-w-6xl mx-auto w-full">
+              {/* Names - Horizontal Row */}
+              <div className="flex flex-wrap justify-center gap-8 mb-6">
                 <div className="text-lg text-gray-300 leading-relaxed hover:text-white transition-colors">
                   <a 
                     href="https://www.linkedin.com/in/manglamkartik/"
@@ -190,7 +224,7 @@ export default function Home() {
               </div>
               
               {/* Address */}
-              <div className="text-center col-span-1">
+              <div className="text-center mb-6">
                 <p className="text-lg text-gray-300 leading-relaxed">
                   H5, IIT Bombay<br />
                   Powai, Mumbai 400076
@@ -198,7 +232,7 @@ export default function Home() {
               </div>
 
               {/* Email */}
-              <div className="text-right mr-[-4rem]">
+              <div className="text-center mb-8">
                 <a 
                   href="mailto:main@agenticaicorporation.com"
                   className="text-lg text-gray-300 leading-relaxed hover:text-white transition-colors"
@@ -211,11 +245,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Background Text */}
-      <div className="fixed top-[35%] left-1/2 transform -translate-x-1/2 z-0 w-full text-center">
-        <h2 className="text-[#f5e9d3] text-[15vw] leading-none font-light opacity-30 whitespace-nowrap tracking-tighter">
-          Web of Agents
-        </h2>
+      {/* Copyright */}
+      <div className="relative w-full text-center text-gray-500 text-sm py-4">
+        <p>© {new Date().getFullYear()} Agentic AI Corporation. All rights reserved.</p>
       </div>
     </div>
   )
