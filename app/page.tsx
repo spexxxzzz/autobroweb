@@ -25,13 +25,10 @@ export default function Home() {
     <div className="bg-black text-white overflow-x-hidden">
       {/* Social Media Icons */}
       <div className="fixed top-6 right-6 flex gap-4 z-20">
-        <Link href="#" className="text-white hover:text-gray-300">
-          <Instagram size={24} />
-        </Link>
-        <Link href="#" className="text-white hover:text-gray-300">
+        <Link href="https://x.com/agenticaicorp" className="text-white hover:text-gray-300" target="_blank" rel="noopener noreferrer">
           <XLogo size={24} />
         </Link>
-        <Link href="#" className="text-white hover:text-gray-300">
+        <Link href="https://www.linkedin.com/company/106804912/admin/dashboard/" className="text-white hover:text-gray-300" target="_blank" rel="noopener noreferrer">
           <Linkedin size={24} />
         </Link>
       </div>
@@ -66,7 +63,7 @@ export default function Home() {
         </div>
 
         {/* Content Sections Container with Dark Overlay */}
-        <div className="relative bg-black/90 mt-64 w-full">
+        <div className="relative bg-black/90 mt-64 w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden">
           {/* About Section */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
@@ -108,14 +105,14 @@ export default function Home() {
           </p>
           <div className="w-full max-w-4xl aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-2xl relative group">
             <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://www.youtube.com/embed/sRHw6fOsgvM"
               title="Agentic AI Vision"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-full"
             />
             <a
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              href="https://www.youtube.com/watch?v=sRHw6fOsgvM"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute top-4 right-4 bg-black/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
