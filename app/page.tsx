@@ -155,7 +155,7 @@ export default function Home() {
 
                 <div className="mt-8">
                   <Link
-                    href="#"
+                    href="http://cogni.agenticaicorporation.com/"
                     className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-100 transition-colors duration-300"
                   >
                     Try Now
