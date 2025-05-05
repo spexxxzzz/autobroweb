@@ -69,7 +69,7 @@ export default function Home() {
             <h2 className="text-4xl font-light tracking-tighter mb-8">About Us</h2>
             <div className="max-w-3xl space-y-6">
               <p className="text-lg text-gray-300 leading-relaxed">
-                ABC is an automation tool that enables AI Agent to interact with web browser just like humans. It allows them to understand content, then intelligently performs actions such as clicking, typing, navigating, or extracting data.
+                AutoBro is a browser automation platform that enables AI Agent to interact with web browser just like humans. It allows them to understand content, then intelligently performs actions such as clicking, typing, navigating, or extracting data.
               </p>
             </div>
             {/* Feature Cards */}
@@ -126,18 +126,18 @@ export default function Home() {
           id="demo">
           <h2 className="text-4xl font-light tracking-tighter mb-16 text-center">Demo Video</h2>
           <p className="text-lg text-gray-300 leading-relaxed mb-8 text-center max-w-3xl mx-auto">
-            This video will give a feel of what it will look like when your agent surfs on the browser
+            This video will give a feel of what it will look like when your agent surfs the browser
           </p>
           <div className="w-full max-w-4xl aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-2xl relative group">
             <iframe
-              src="https://www.youtube.com/embed/sRHw6fOsgvM"
+              src="https://www.youtube.com/embed/LylPQ1fQpEM"
               title="Agentic AI Vision"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-full"
             />
             <a
-              href="https://www.youtube.com/watch?v=sRHw6fOsgvM"
+              href="https://youtu.be/LylPQ1fQpEM"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute top-4 right-4 bg-black/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -149,8 +149,6 @@ export default function Home() {
           </div>
           </motion.div>
 
-
-
           {/* Pricing Section */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
@@ -160,7 +158,7 @@ export default function Home() {
             id="pricing"
           >
             <h2 className="text-4xl font-light tracking-tighter mb-16 text-center">Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto w-full px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto w-full px-4">
               {/* Basic Plan */}
               <div className="bg-[#1a1a1a] p-8 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors">
                 <h3 className="text-2xl font-light mb-4">Basic</h3>
@@ -170,16 +168,28 @@ export default function Home() {
                   <li>✓ Includes 20 USD of API credits per month</li>
                   <li>✓ Unlimited access</li>
                 </ul>
-                <button className="w-full bg-[#5a5a58] hover:bg-[#6d6d6b] text-white py-2 rounded-full transition-colors">Email Us</button>
+                <a 
+                  href="mailto:main@agenticaicorporation.com?subject=AutoBro%20Basic%20Plan%20Inquiry&body=Hey%2C%20I%20am%20interested%20to%20purchase%20the%20%2420%20Basic%20Plan!"
+                  className="block w-full text-center bg-[#5a5a58] hover:bg-[#6d6d6b] text-white py-2 rounded-full transition-colors"
+                >
+                  Email Us
+                </a>
               </div>
               {/* Enterprise Plan */}
               <div className="bg-[#1a1a1a] p-8 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors">
                 <h3 className="text-2xl font-light mb-4">Enterprise</h3>
                 <p className="text-3xl font-light mb-6">Custom</p>
                 <ul className="space-y-3 text-gray-300 mb-8">
-                  <li>Contact Sales</li>
+                  <li>✓Contact Sales</li>
+                  <li>✓24 x 7 dedicated support</li>
+                  <li>✓Custom Deployement</li>
                 </ul>
-                <button className="w-full bg-[#5a5a58] hover:bg-[#6d6d6b] text-white py-2 rounded-full transition-colors">Email Us</button>
+                <a 
+                  href="mailto:main@agenticaicorporation.com?subject=AutoBro%20Enterprise%20Plan%20Inquiry&body=Hey%2C%20I%20am%20interested%20to%20know%20more%20about%20the%20custom%20plans"
+                  className="block w-full text-center bg-[#5a5a58] hover:bg-[#6d6d6b] text-white py-2 rounded-full transition-colors"
+                >
+                  Email Us
+                </a>
               </div>
             </div>
           </motion.div>
@@ -194,37 +204,42 @@ export default function Home() {
           >
             <h2 className="text-4xl font-light tracking-tighter mb-16 text-center">Upcoming</h2>
             <div className="max-w-6xl mx-auto w-full px-4">
-              <div className="bg-[#1a1a1a] p-8 rounded-lg border border-gray-800 hover:border-gray-700 transition-all transform hover:scale-105">
-                <h3 className="text-3xl font-light mb-6 text-center">AutoBro2</h3>
-                <p className="text-xl text-gray-300 mb-8 text-center">Coming Soon</p>
-                <div className="space-y-6 text-gray-300">
-                  <p className="text-center">Get ready for the next evolution of browser automation</p>
-                  <ul className="space-y-4 max-w-2xl mx-auto">
-                    <li className="flex items-center gap-3">
-                      <span className="text-[#5a5a58]">✦</span>
-                      Enhanced AI capabilities with advanced reasoning
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <span className="text-[#5a5a58]">✦</span>
-                      Improved performance and reliability
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <span className="text-[#5a5a58]">✦</span>
-                      Extended browser compatibility
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <span className="text-[#5a5a58]">✦</span>
-                      New customization options
-                    </li>
-                  </ul>
+              <div className="relative p-[3px] rounded-lg overflow-hidden bg-gradient-to-r from-transparent via-transparent to-transparent">
+                {/* Animated border */}
+                <div className="absolute inset-0 rounded-lg">
+                  <div className="absolute inset-[-2px] bg-[#00bfff] opacity-70 blur-[2px] animate-spin-slow"></div>
+                  <div className="absolute inset-[-1px] bg-gradient-to-r from-[#00bfff] to-[#0080ff] animate-rotate-gradient rounded-lg"></div>
                 </div>
-                <div className="mt-8 text-center">
-                  <button className="bg-[#5a5a58] hover:bg-[#6d6d6b] text-white px-8 py-3 rounded-full transition-colors inline-flex items-center gap-2">
-                    Coming Soon
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
+                
+                {/* Content */}
+                <div className="bg-[#1a1a1a] p-8 rounded-lg relative z-10 transition-all transform hover:scale-[0.99]">
+                  <h3 className="text-3xl font-light mb-6 text-center">AutoBro2</h3>
+                  <p className="text-xl text-gray-300 mb-8 text-center">Coming Soon &gt;&gt;</p>
+                  <div className="space-y-6 text-gray-300">
+                    <p className="text-center">Get ready for the next evolution of browser automation</p>
+                    <ul className="space-y-4 max-w-2xl mx-auto">
+                      <li className="flex items-center gap-3">
+                        <span className="text-[#5a5a58]">✦</span>
+                        5X Faster performance than current version
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <span className="text-[#5a5a58]">✦</span>
+                        Enhanced AI capabilities with advanced reasoning
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <span className="text-[#5a5a58]">✦</span>
+                        Improved performance and reliability
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <span className="text-[#5a5a58]">✦</span>
+                        Extended browser compatibility
+                      </li>
+                      <li className="flex items-center gap-3">
+                        <span className="text-[#5a5a58]">✦</span>
+                        New customization options
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
