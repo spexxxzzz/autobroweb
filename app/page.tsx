@@ -149,6 +149,86 @@ export default function Home() {
           </div>
           </motion.div>
 
+          {/* Testimonials Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="min-h-[70vh] flex flex-col items-center justify-center relative z-10 py-16"
+          >
+            <h2 className="text-4xl font-light tracking-tighter mb-16 text-center">Testimonials</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto w-full px-4">
+              {/* Shopping Testimonial */}
+              <div className="bg-[#1a1a1a] p-8 rounded-lg border border-gray-800 hover:border-gray-700 transition-all hover:transform hover:scale-105">
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-300 italic mb-6">"I am a Hotel Booking agent, and AutoBro helps me in my research to find Hotels within a price range from different sites"</p>
+                <div className="flex items-center">
+                  <div className="h-10 w-10 rounded-full bg-[#5a5a58] flex items-center justify-center mr-3">
+                    <span className="text-white font-medium">PS</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Palvinder Singh</h4>
+    
+                  </div>
+                </div>
+              </div>
+              
+              {/* Research Testimonial */}
+              <div className="bg-[#1a1a1a] p-8 rounded-lg border border-gray-800 hover:border-gray-700 transition-all hover:transform hover:scale-105">
+                <div className="flex mb-4">
+                  {[...Array(4)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                  <svg className="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <p className="text-gray-300 italic mb-6">"I am a B2B seller, AutoBro sorts the list of materials given to it in from online sites and saves my time!"</p>
+                <div className="flex items-center">
+                  <div className="h-10 w-10 rounded-full bg-[#5a5a58] flex items-center justify-center mr-3">
+                    <span className="text-white font-medium">AB</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Abhishek Bassi</h4>
+                    
+                  </div>
+                </div>
+              </div>
+              
+              {/* Business Testimonial */}
+              <div className="bg-[#1a1a1a] p-8 rounded-lg border border-gray-800 hover:border-gray-700 transition-all hover:transform hover:scale-105">
+                <div className="flex mb-4">
+                  {[...Array(4)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                  <svg className="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+                <p className="text-gray-300 italic mb-6">"AutoBro has been an excellent travel-agent for me. It has helped me book flights, hotels and rental cars"</p>
+                <div className="flex items-center">
+                  <div className="h-10 w-10 rounded-full bg-[#5a5a58] flex items-center justify-center mr-3">
+                    <span className="text-white font-medium">SK</span>
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Suraj Khanna</h4>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
           {/* Pricing Section */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
